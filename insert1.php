@@ -7,7 +7,7 @@ if(isset($_POST['insert'])){
     $sql = "INSERT INTO info (name, number) VALUES('$name', '$number')";
 
     if((mysqli_query($db, $sql))){
-        echo"data inserted";
+        header("location:view.php");
 
     }
 }
