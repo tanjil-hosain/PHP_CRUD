@@ -38,5 +38,8 @@ $db=mysqli_connect("localhost", "root", "", "crud");
         <?php  } ?>
     </tbody>
    </table>
+
+   <br> <br>
+   <button><a href="insert1.php">Add Products</a></button>
 </body>
 </html>
