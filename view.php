@@ -12,24 +12,28 @@ $db=mysqli_connect("localhost", "root", "", "crud");
 <body>
    <table border="2">
     <thead>
-    <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>number</th>
-    </tr>
-   </thead>
-   <tbody>
-    <?php
-    $view = $db->query("SELECT * FROM  info");
-    while(list($id, $name, $number) = $view->fetch_row()){
-    ?>
-    <tr>
-        <td><?php echo $id;  ?></td>
-        <td><?php echo $name; ?></td>
-        <td><?php echo $number; ?></td>
-    </tr>
-    <?php } ?>
-   </tbody>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Number</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php
+        $view = $db->query("SELECT * FROM info");
+        while(list($id, $name, $number)= $view->fetch_row()){   
+       
+        ?>
+        <tr>
+            <td><?php echo $id; ?></td>
+            <td><?php echo $name; ?></td>
+            <td><?php echo $number; ?></td>
+            <td><span > <a href='delete.php?delete=<?php echo $id; ?>'>Delete</a>
+                </span></td>
+
+        </tr>
+        <?php  } ?>
+    </tbody>
    </table>
 </body>
 </html>
