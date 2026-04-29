@@ -30,6 +30,9 @@ $db=mysqli_connect("localhost", "root", "", "crud");
             <td><?php echo $number; ?></td>
             <td><span > <a href='delete.php?delete=<?php echo $id; ?>'>Delete</a>
                 </span></td>
+                <td>
+                    <a href="update.php?id=<?php echo $id ?>">Update</a>
+                </td>
 
         </tr>
         <?php  } ?>
